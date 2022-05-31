@@ -34,6 +34,7 @@ namespace MTFO.Managers
 
             _enableHotReload = config.Bind(ConfigStrings.SECTION_DEV, ConfigStrings.SETTING_HOTRELOAD, false, ConfigStrings.SETTING_HOTRELOAD_DESC);
             _dumpFiles = config.Bind(ConfigStrings.SECTION_DEV, ConfigStrings.SETTING_DUMPFILE, false, ConfigStrings.SETTING_DUMPFILE_DESC);
+            _dumpFromGame = config.Bind(ConfigStrings.SECTION_DEV, ConfigStrings.SETTING_DUMPFROMGAME, false, ConfigStrings.SETTING_DUMPFROMGAME_DESC);
             _isVerbose = config.Bind(ConfigStrings.SECTION_DEBUG, ConfigStrings.SETTING_VERBOSE, false, ConfigStrings.SETTING_VERBOSE_DESC);
             _useLegacyLoading = config.Bind(ConfigStrings.SECTION_GENERAL, ConfigStrings.SETTING_USE_LEGACY_PATH, false, ConfigStrings.SETTING_USE_LEGACY_PATH_DESC);
 
@@ -123,6 +124,7 @@ namespace MTFO.Managers
         private static readonly ConfigEntry<bool> _enableHotReload;
         private static readonly ConfigEntry<string> _rundownFolder;
         private static readonly ConfigEntry<bool> _dumpFiles;
+        private static readonly ConfigEntry<bool> _dumpFromGame;
         private static readonly ConfigEntry<bool> _isVerbose;
         private static readonly ConfigEntry<bool> _useLegacyLoading;
 
@@ -142,39 +144,15 @@ namespace MTFO.Managers
         //Flags
         public static bool HasCustomContent;
         public static bool IsModded;
-        public static bool IsVerbose
-        {
-            get
-            {
-                return _isVerbose.Value;
-            }
-        }
+        public static bool IsVerbose => _isVerbose.Value;
 
         //Dev Tools
-        public static bool IsHotReloadEnabled 
-        { 
-            get
-            {
-                return _enableHotReload.Value;
-            } 
-        }
-
-        public static bool DumpUnknownFiles
-        {
-            get
-            {
-                return _dumpFiles.Value;
-            }
-        }
+        public static bool IsHotReloadEnabled => _enableHotReload.Value;
+        public static bool DumpUnknownFiles => _dumpFiles.Value;
+        public static bool DumpGameJson => _dumpFromGame.Value;
 
         //Legacy
-        public static bool UseLegacyLoading
-        {
-            get
-            {
-                return _useLegacyLoading.Value;
-            }
-        }
+        public static bool UseLegacyLoading => _useLegacyLoading.Value;
 
         private static void GetGameDataLookupV2()
         {

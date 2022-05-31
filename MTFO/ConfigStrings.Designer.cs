@@ -107,6 +107,24 @@ namespace MTFO {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dump From Game.
+        /// </summary>
+        internal static string SETTING_DUMPFROMGAME {
+            get {
+                return ResourceManager.GetString("SETTING_DUMPFROMGAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggles Dumping Missing json file from base game.
+        /// </summary>
+        internal static string SETTING_DUMPFROMGAME_DESC {
+            get {
+                return ResourceManager.GetString("SETTING_DUMPFROMGAME_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EnableHotReload.
         /// </summary>
         internal static string SETTING_HOTRELOAD {

@@ -93,7 +93,7 @@ namespace MTFO.Patches
 
                             return;
                         }
-                        else
+                        else if (ConfigManager.DumpGameJson)
                         {
                             Log.Verbose("No file found at [" + filePath + "], writing file to disk...");
                             File.WriteAllText(filePath, __result);

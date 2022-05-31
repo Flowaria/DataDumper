@@ -133,6 +133,12 @@
     <value>Debug Setting
 If enabled, when an unknown data block is encounterd the files contents will be dumped into the console</value>
   </data>
+  <data name="SETTING_DUMPFROMGAME" xml:space="preserve">
+    <value>Dump From Game</value>
+  </data>
+  <data name="SETTING_DUMPFROMGAME_DESC" xml:space="preserve">
+    <value>Toggles Dumping Missing json file from base game</value>
+  </data>
   <data name="SETTING_HOTRELOAD" xml:space="preserve">
     <value>EnableHotReload</value>
   </data>
