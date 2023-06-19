@@ -1,4 +1,6 @@
-﻿using MTFO.Managers;
+﻿global using MTFO.Utilities.Extensions;
+
+using MTFO.Managers;
 using MTFO.HotReload;
 using BepInEx.Unity.IL2CPP;
 using BepInEx;
