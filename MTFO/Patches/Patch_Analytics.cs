@@ -20,7 +20,7 @@ namespace MTFO.Patches
     {
         public static void Prefix(FriendsDataType type, ref string data, SNet_Core_STEAM __instance)
         {
-            switch(type)
+            switch (type)
             {
                 case FriendsDataType.ExpeditionName:
                     data = $"MODDED - {data}";

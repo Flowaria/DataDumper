@@ -115,7 +115,7 @@ namespace MTFO {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to How to Dump GameData? (Single = Dump gamedata in each single file / PartialData = Dump few gamedata as PartialData / FullPartialData = Dump Everything into PartialData).
+        ///   Looks up a localized string similar to The mode in which to dump game data. (Single = Legacy dumping style. Each datablock is writen to it&apos;s own file / PartialData = Dumps commonly used datablocks with each entry as it&apos;s own file / FullPartialData = Dumps everything as Partial Data).
         /// </summary>
         internal static string SETTING_DUMPDATA_MODE_DESC {
             get {

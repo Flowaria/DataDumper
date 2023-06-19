@@ -15,8 +15,7 @@ namespace MTFO.Patches
         {
             //Replace discord button text and link
             __instance.m_discordButton.SetText("MOD SERVER");
-            __instance.m_discordButton.OnBtnPressCallback = (Action<int>)((id) => Application.OpenURL("https://discord.com/invite/rRMPtv4FAh"));
-
+            __instance.m_discordButton.SetOpenURLOnPress("https://discord.com/invite/rRMPtv4FAh");
 
             //Disable and hide the matchmake button on the left
             __instance.m_matchmakeAllButton.SetVisible(false);
@@ -24,12 +23,12 @@ namespace MTFO.Patches
             __instance.m_matchmakeAllButton.OnBtnPressCallback = null;
 
             __instance.m_aboutTheRundownButton.SetText("THUNDERSTORE");
-            __instance.m_aboutTheRundownButton.OnBtnPressCallback = (Action<int>)((id) => Application.OpenURL("https://gtfo.thunderstore.io/"));
+            __instance.m_aboutTheRundownButton.SetOpenURLOnPress("https://gtfo.thunderstore.io/");
 
             //Hide the matchmake button when selecting an expedition
             __instance.m_expeditionWindow.m_matchButton.SetText("MATCHMAKE DISABLED");
             __instance.m_expeditionWindow.m_matchButton.m_visible = false;
-            __instance.m_expeditionWindow.m_matchButton.OnBtnPressCallback = null;
+            __instance.m_expeditionWindow.m_matchButton.SetPressEvent(null);
         }
     }
 }

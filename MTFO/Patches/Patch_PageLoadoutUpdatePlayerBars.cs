@@ -9,9 +9,9 @@ namespace MTFO.Patches
         public static void Prefix(CM_PageLoadout __instance)
         {
             //Disable matchmake buttons behind players
-            foreach(CM_PlayerLobbyBar playerLobbyBar in __instance.m_playerLobbyBars)
-            { 
-                playerLobbyBar.m_matchmakeButton.SetOnBtnPressCallback(null);
+            foreach (CM_PlayerLobbyBar playerLobbyBar in __instance.m_playerLobbyBars)
+            {
+                playerLobbyBar.m_matchmakeButton.SetPressEvent(null);
                 playerLobbyBar.m_matchmakeButton.SetText("DISABLED");
             }
         }
